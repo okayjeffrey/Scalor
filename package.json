@@ -1,0 +1,16 @@
+{
+  "name": "scalor",
+  "version": "1.0.0",
+  "description": "A color scale mixing app (mostly just scss)",
+  "main": "index.html",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "color",
+    "scale",
+    "scss"
+  ],
+  "author": "Jeffrey Larrimore",
+  "license": "ISC"
+}

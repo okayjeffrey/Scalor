@@ -1,0 +1,398 @@
+//---------------------------- BREAKPOINTS
+// @include breakpoint(small){  }
+// @include breakpoint(medium){  }
+// @include breakpoint(large){ }
+
+@mixin breakpoint($point) {
+  @if $point == large {
+    @media (min-width: 64em) { @content; }
+  }
+  @else if $point == medium {
+    @media (min-width: 50em) { @content; }
+  }
+  @else if $point == small {
+    @media (min-width: 40em) { @content; }
+  }
+}
+
+// CORE BRAND COLORS HERE!
+// CHANGE ME!!!
+$clr-1: (#A6C9B1, 'Gum Leaf');
+$clr-2: (#ED670D, 'Tango');
+$clr-3: (#FFAC2C, 'Saffron');
+$clr-4: (#FAE09C, 'Brown');
+$clr-5: (#111331, 'Bunting');
+$clr-6: (#929292, 'GRAY');
+
+// FOR MIXING depending on what outcome you want.
+$warm: #5B062D;
+$cool: #0096FF;
+$black:#000;
+$white:#fff;
+
+// For text mixing on the Color Chips
+// $dark-text-default: #333;
+// $light-text-default: white;
+
+// Understands which color to choose for @color-contrast
+// ---------------- NEW COLOR SCALE  Understands which color to choose for @color-contrast
+@function color-choice($color) {
+    @if (lightness( $color ) > 70) {
+        @return darken( $color, 40% );
+    } @else {
+        @return lighten( $color, 80% );
+    }
+}
+// ---------------- Understands the brightness of the color for @color-contrast
+@function brightness($color) {
+  @return ((red($color) * .299) + (green($color) * .587) + (blue($color) * .114)) / 255 * 100%;
+}
+
+// ---------------- Compares contrast of a given color to the light/dark arguments and returns whichever is most "contrasty"
+@function color-contrast($color, $dark, $light) {
+    @if $color == null { @return null; }
+    @else {
+        $color-brightness: brightness($color);
+        $light-text-brightness: brightness($light);
+        $dark-text-brightness: brightness($dark);
+
+        @return if( abs($color-brightness - $light-text-brightness) > abs($color-brightness - $dark-text-brightness), $light, $dark);
+    }
+}
+
+// ---------------- MIX the Palettes from the base colors above!
+@mixin mixIt($color, $name, $ref) {
+    $dark: mix($black, $color, 50% );
+    $light: mix($white, $color, 90% );
+    $base-num: 4;
+
+    // BASE
+    .#{$ref}.swatch-#{$base-num} {
+        background:$color;
+		color: $light;
+        color: color-contrast($color, $dark, $light);
+        &.chip::before { content:$name; background-color: rgba(255,255,255,0.5); border-color:transparent; }
+    }
+    // SHADES
+    @for $i from 1 through 3 {
+        $perc: $i * 10;
+        $scale: 72 / $i;
+        $color-shade: mix($black, $color, $scale + 0% );
+        // $color-shade: shade($color, $scale + 0% );
+        $mixer: darken($warm, $i * 33 );
+        $shade: mix($color-shade, $mixer, 95%);
+
+        .#{$ref}.swatch-#{$i} {
+            background:$shade;
+			color: $light;
+            color: color-contrast($shade, $dark, $light);
+            &.chip::before { content:''$name+'-'+$perc;}
+        }
+    }
+    // TINTS
+    @for $i from 5 through 7 {
+        $ii: $i - 4;
+        $perc: $i * 10;
+        $scale: 28*($i - 4);
+        $color-tint: mix($white, $color, $scale + 0% );
+        // $color-tint: tint($color, $scale + 0% );
+        $mixer: lighten( $cool, $i * 14);
+        $tint: mix($color-tint, $mixer, 90);
+
+        .#{$ref}.swatch-#{$i} {
+            background:$tint;
+			color: $dark;
+            // color: color-contrast($tint, $dark, $light);
+            &.chip::before { content:''$name+'-'+$perc;}
+        }
+    }
+}
+
+// ---------------- MIX the Palettes from the base colors above!
+@mixin remixIt($color, $name, $ref) {
+    $cooler: #0096FF;
+    $dark: mix($black, $color, 50% );
+    $light: mix($white, $color, 90% );
+    $base-num: 4;
+
+    // BASE
+    .#{$ref}.swatch-#{$base-num} {
+        $mix: mix($color, $cooler, 95%);
+        background:$mix;
+
+		color: $light;
+        color: color-contrast($color, $dark, $light);
+        &.chip::before { content:$name; background-color: rgba(255,255,255,0.5); border-color:transparent; }
+    }
+    // SHADES
+    @for $i from 1 through 3 {
+        $perc: $i * 10;
+        $scale: 90 / $i;
+        $color-shade: mix($black, $color, $scale + 0% );
+        // $mixer: darken($cooler, $i * 33 );
+        $shade: mix($color-shade, $cooler, 95%);
+
+        .#{$ref}.swatch-#{$i} {
+            background:$shade;
+
+			color: $light;
+            color: color-contrast($shade, $dark, $light);
+            &.chip::before { content:''$name+'-'+$perc;}
+        }
+    }
+    // TINTS
+    @for $i from 5 through 7 {
+        $ii: $i - 4;
+        $perc: $i * 10;
+        $scale: 30*($i - 4);
+        $color-tint: mix($white, $color, $scale + 0% );
+        // $mixer: lighten( $cooler, $i * 14);
+        $tint: mix($color-tint, $cooler, 99%);
+
+        .#{$ref}.swatch-#{$i} {
+            background:$tint;
+			color: $dark;
+            color: color-contrast($tint, $dark, $light);
+            &.chip::before { content:''$name+'-'+$perc;}
+        }
+    }
+}
+
+// WHAT TO MIX!!!!!
+@include mixIt(nth($clr-1, 1), nth($clr-1, 2), 'clr-1');
+@include mixIt(nth($clr-2, 1), nth($clr-2, 2), 'clr-2');
+@include mixIt(nth($clr-3, 1), nth($clr-3, 2), 'clr-3');
+@include mixIt(nth($clr-4, 1), nth($clr-4, 2), 'clr-4');
+@include remixIt(nth($clr-5, 1), nth($clr-5, 2), 'clr-5');
+@include remixIt(nth($clr-6, 1), nth($clr-6, 2), 'clr-6');
+
+//////////////////////////////////////////////////////////////////////////////// NO JUNK
+
+*, html {
+  margin:0;
+  padding:0;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+    margin:auto;
+    max-width:1200px;
+}
+
+.flex { display: flex;}
+.space-around { justify-content:space-around; }
+.flex-wrap { flex-wrap: wrap;}
+.flex-wrap-reverse { flex-wrap: wrap-reverse;}
+.flex-column { flex-direction: column;}
+.flex-column-reverse { flex-direction: column-reverse;}
+
+.color-area {
+    flex-direction: column-reverse;
+    @include breakpoint(small){flex-direction: column;}
+}
+
+.palette {
+    @include breakpoint(small){
+        margin:2vh 2vw;
+        .chip:nth-child(1) { margin-top:0; }
+        .chip:last-child { margin-bottom:0; }
+    }
+}
+
+.chip {
+    box-sizing: border-box;
+    display:flex;
+    flex-direction: column;
+    height: 25vw;
+    width: 100vw;
+    text-transform:uppercase;
+    background:#000;
+    text-align:center;
+    overflow:hidden;
+    justify-content:center;
+    align-items: center;
+    font-size:5vw;
+    font-weight: 400;
+    letter-spacing:0.05ex;
+    line-height:1.38;
+
+    &:before {
+        // display:none;\
+        white-space: pre;
+        font-size:0.8em;
+        font-weight:800;
+        // border: solid 2px rgba(255,255,255,0.5);
+        // background-color: rgba(255,255,255,0.3);
+        padding:0.3vh 0.5vh;
+        border-radius:4px;
+    // @include breakpoint(small){ display:block; }
+    }
+
+    @include breakpoint(small){
+        // height: 10vw;
+        // width: 10vw;
+        height:180px;
+        width:180px;
+        min-height:100px;
+        min-width:100px;
+        max-height: 168px;
+        max-width: 168px;
+        font-size:1.3vmax;
+        border-radius: 100%;
+        margin:-3vh 0 0 0;
+    }
+    @include breakpoint(large){ font-size:16px; }
+}
+
+.playground {
+    $size: 100%;
+
+    overflow:hidden;
+    width:100vw;
+    height:100vw;
+    max-width:695px;
+    max-height:695px;
+    margin:auto;
+
+    @include breakpoint(small){
+        transition: height .3s ease, width .3s ease;
+        width:75vw;
+        height:75vw;
+    }
+
+    .x, .t, .bubs, .o {
+        overflow:hidden;
+        min-height: 50%;
+        width: 50%;
+        position:relative;
+
+        > div {
+            height:$size;
+            width: $size;
+            position:absolute;
+        }
+    }
+
+    .x {
+        :nth-child(1) {
+            top:0;
+            left:-88%;
+            z-index:100;
+            transform: rotate(45deg);
+        }
+        :nth-child(2) {
+            top:-88%;
+            left:0;
+            z-index:100;
+            transform: rotate(45deg);
+        }
+        :nth-child(3) {
+            top:0;
+            left:88%;
+            z-index:100;
+            transform: rotate(45deg);
+        }
+        :nth-child(4) {
+            top:88%;
+            left:0;
+            z-index:100;
+            transform: rotate(45deg);
+        }
+    }
+    .t {
+        :nth-child(1) {
+            position: absolute;
+            top:60%;
+            left:60%;
+            z-index:100;
+        }
+        :nth-child(2) {
+            top:-60%;
+            left:-60%;
+            z-index:100;
+        }
+        :nth-child(3) {
+            top:-60%;
+            left:60%;
+            z-index:100;
+        }
+        :nth-child(4) {
+            top:60%;
+            left:-60%;
+            z-index:100;
+        }
+    }
+    .bubs {
+        :nth-child(1) {
+            height:$size/3;
+            width: $size/3;
+            top:random(50) + 0%;
+            left:random(50) + 0%;
+            z-index:80;
+            border-radius:100%;
+        }
+        :nth-child(2) {
+            height:$size/3.4;
+            width: $size/3.4;
+            top:random(50) + 0%;
+            right:random(50) + 0%;
+            z-index:70;
+            border-radius:100%;
+        }
+        :nth-child(3) {
+            height:$size/2.4;
+            width: $size/2.4;
+            position:absolute;
+            bottom:random(50) + 0%;
+            left:random(50) + 0%;
+            z-index:60;
+            border-radius:100%;
+        }
+        :nth-child(4) {
+            height:$size/4;
+            width: $size/4;
+            bottom:random(50) + 0%;
+            right:random(50) + 0%;
+            z-index:100;
+            border-radius:100%;
+        }
+    }
+    .o {
+        :nth-child(1) {
+            height:$size/1.6;
+            width: $size/1.6;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            z-index:90;
+            border-radius:100%;
+        }
+        :nth-child(2) {
+            height:$size/2.8;
+            width: $size/2.8;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            z-index:100;
+            border-radius:100%;
+        }
+        :nth-child(3) {
+            height:$size/1.2;
+            width: $size/1.2;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            z-index:80;
+            border-radius:100%;
+        }
+        :nth-child(4) {
+            height:$size;
+            width: $size;
+            top:0;
+            left:0;
+            z-index:70;
+            border-radius:100%;
+        }
+    }
+}

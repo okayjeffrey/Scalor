@@ -1,0 +1,491 @@
+.clr-1.swatch-4 {
+  background: #A6C9B1;
+  color: #f6faf7;
+  color: #536559; }
+  .clr-1.swatch-4.chip::before {
+    content: "Gum Leaf";
+    background-color: rgba(255, 255, 255, 0.5);
+    border-color: transparent; }
+
+.clr-1.swatch-1 {
+  background: #2c3530;
+  color: #f6faf7;
+  color: #f6faf7; }
+  .clr-1.swatch-1.chip::before {
+    content: "" "Gum Leaf-10"; }
+
+.clr-1.swatch-2 {
+  background: #657b6b;
+  color: #f6faf7;
+  color: #f6faf7; }
+  .clr-1.swatch-2.chip::before {
+    content: "" "Gum Leaf-20"; }
+
+.clr-1.swatch-3 {
+  background: #789180;
+  color: #f6faf7;
+  color: #f6faf7; }
+  .clr-1.swatch-3.chip::before {
+    content: "" "Gum Leaf-30"; }
+
+.clr-1.swatch-5 {
+  background: #c5dccd;
+  color: #536559; }
+  .clr-1.swatch-5.chip::before {
+    content: "" "Gum Leaf-50"; }
+
+.clr-1.swatch-6 {
+  background: #dce9e0;
+  color: #536559; }
+  .clr-1.swatch-6.chip::before {
+    content: "" "Gum Leaf-60"; }
+
+.clr-1.swatch-7 {
+  background: #f2f7f4;
+  color: #536559; }
+  .clr-1.swatch-7.chip::before {
+    content: "" "Gum Leaf-70"; }
+
+.clr-2.swatch-4 {
+  background: #ED670D;
+  color: #fdf0e7;
+  color: #fdf0e7; }
+  .clr-2.swatch-4.chip::before {
+    content: "Tango";
+    background-color: rgba(255, 255, 255, 0.5);
+    border-color: transparent; }
+
+.clr-2.swatch-1 {
+  background: #3f1c04;
+  color: #fdf0e7;
+  color: #fdf0e7; }
+  .clr-2.swatch-1.chip::before {
+    content: "" "Tango-10"; }
+
+.clr-2.swatch-2 {
+  background: #903f08;
+  color: #fdf0e7;
+  color: #fdf0e7; }
+  .clr-2.swatch-2.chip::before {
+    content: "" "Tango-20"; }
+
+.clr-2.swatch-3 {
+  background: #ab4a0a;
+  color: #fdf0e7;
+  color: #fdf0e7; }
+  .clr-2.swatch-3.chip::before {
+    content: "" "Tango-30"; }
+
+.clr-2.swatch-5 {
+  background: #f39d62;
+  color: #773407; }
+  .clr-2.swatch-5.chip::before {
+    content: "" "Tango-50"; }
+
+.clr-2.swatch-6 {
+  background: #f8c3a0;
+  color: #773407; }
+  .clr-2.swatch-6.chip::before {
+    content: "" "Tango-60"; }
+
+.clr-2.swatch-7 {
+  background: #fce9dc;
+  color: #773407; }
+  .clr-2.swatch-7.chip::before {
+    content: "" "Tango-70"; }
+
+.clr-3.swatch-4 {
+  background: #FFAC2C;
+  color: #fff7ea;
+  color: #805616; }
+  .clr-3.swatch-4.chip::before {
+    content: "Saffron";
+    background-color: rgba(255, 255, 255, 0.5);
+    border-color: transparent; }
+
+.clr-3.swatch-1 {
+  background: #432e0b;
+  color: #fff7ea;
+  color: #fff7ea; }
+  .clr-3.swatch-1.chip::before {
+    content: "" "Saffron-10"; }
+
+.clr-3.swatch-2 {
+  background: #9b691b;
+  color: #fff7ea;
+  color: #fff7ea; }
+  .clr-3.swatch-2.chip::before {
+    content: "" "Saffron-20"; }
+
+.clr-3.swatch-3 {
+  background: #b87c1f;
+  color: #fff7ea;
+  color: #fff7ea; }
+  .clr-3.swatch-3.chip::before {
+    content: "" "Saffron-30"; }
+
+.clr-3.swatch-5 {
+  background: #ffc976;
+  color: #805616; }
+  .clr-3.swatch-5.chip::before {
+    content: "" "Saffron-50"; }
+
+.clr-3.swatch-6 {
+  background: #ffdeab;
+  color: #805616; }
+  .clr-3.swatch-6.chip::before {
+    content: "" "Saffron-60"; }
+
+.clr-3.swatch-7 {
+  background: #fff3e0;
+  color: #805616; }
+  .clr-3.swatch-7.chip::before {
+    content: "" "Saffron-70"; }
+
+.clr-4.swatch-4 {
+  background: #FAE09C;
+  color: #fffcf5;
+  color: #7d704e; }
+  .clr-4.swatch-4.chip::before {
+    content: "Brown";
+    background-color: rgba(255, 255, 255, 0.5);
+    border-color: transparent; }
+
+.clr-4.swatch-1 {
+  background: #433c2a;
+  color: #fffcf5;
+  color: #fffcf5; }
+  .clr-4.swatch-1.chip::before {
+    content: "" "Brown-10"; }
+
+.clr-4.swatch-2 {
+  background: #98885f;
+  color: #fffcf5;
+  color: #fffcf5; }
+  .clr-4.swatch-2.chip::before {
+    content: "" "Brown-20"; }
+
+.clr-4.swatch-3 {
+  background: #b5a271;
+  color: #fffcf5;
+  color: #fffcf5; }
+  .clr-4.swatch-3.chip::before {
+    content: "" "Brown-30"; }
+
+.clr-4.swatch-5 {
+  background: #fbebbf;
+  color: #7d704e; }
+  .clr-4.swatch-5.chip::before {
+    content: "" "Brown-50"; }
+
+.clr-4.swatch-6 {
+  background: #fdf2d7;
+  color: #7d704e; }
+  .clr-4.swatch-6.chip::before {
+    content: "" "Brown-60"; }
+
+.clr-4.swatch-7 {
+  background: #fefbf1;
+  color: #7d704e; }
+  .clr-4.swatch-7.chip::before {
+    content: "" "Brown-70"; }
+
+.clr-5.swatch-4 {
+  background: #101a3b;
+  color: #e7e7ea;
+  color: #e7e7ea; }
+  .clr-5.swatch-4.chip::before {
+    content: "Bunting";
+    background-color: rgba(255, 255, 255, 0.5);
+    border-color: transparent; }
+
+.clr-5.swatch-1 {
+  background: #020912;
+  color: #e7e7ea;
+  color: #e7e7ea; }
+  .clr-5.swatch-1.chip::before {
+    content: "" "Bunting-10"; }
+
+.clr-5.swatch-2 {
+  background: #091126;
+  color: #e7e7ea;
+  color: #e7e7ea; }
+  .clr-5.swatch-2.chip::before {
+    content: "" "Bunting-20"; }
+
+.clr-5.swatch-3 {
+  background: #0b142d;
+  color: #e7e7ea;
+  color: #e7e7ea; }
+  .clr-5.swatch-3.chip::before {
+    content: "" "Bunting-30"; }
+
+.clr-5.swatch-5 {
+  background: #575b70;
+  color: #090a19;
+  color: #e7e7ea; }
+  .clr-5.swatch-5.chip::before {
+    content: "" "Bunting-50"; }
+
+.clr-5.swatch-6 {
+  background: #9ea1ae;
+  color: #090a19;
+  color: #090a19; }
+  .clr-5.swatch-6.chip::before {
+    content: "" "Bunting-60"; }
+
+.clr-5.swatch-7 {
+  background: #e5e6ea;
+  color: #090a19;
+  color: #090a19; }
+  .clr-5.swatch-7.chip::before {
+    content: "" "Bunting-70"; }
+
+.clr-6.swatch-4 {
+  background: #8b9297;
+  color: #f4f4f4;
+  color: #f4f4f4; }
+  .clr-6.swatch-4.chip::before {
+    content: "GRAY";
+    background-color: rgba(255, 255, 255, 0.5);
+    border-color: transparent; }
+
+.clr-6.swatch-1 {
+  background: #0e161b;
+  color: #f4f4f4;
+  color: #f4f4f4; }
+  .clr-6.swatch-1.chip::before {
+    content: "" "GRAY-10"; }
+
+.clr-6.swatch-2 {
+  background: #4c5459;
+  color: #f4f4f4;
+  color: #f4f4f4; }
+  .clr-6.swatch-2.chip::before {
+    content: "" "GRAY-20"; }
+
+.clr-6.swatch-3 {
+  background: #61686e;
+  color: #f4f4f4;
+  color: #f4f4f4; }
+  .clr-6.swatch-3.chip::before {
+    content: "" "GRAY-30"; }
+
+.clr-6.swatch-5 {
+  background: #b1b3b4;
+  color: #494949;
+  color: #494949; }
+  .clr-6.swatch-5.chip::before {
+    content: "" "GRAY-50"; }
+
+.clr-6.swatch-6 {
+  background: #d1d2d3;
+  color: #494949;
+  color: #494949; }
+  .clr-6.swatch-6.chip::before {
+    content: "" "GRAY-60"; }
+
+.clr-6.swatch-7 {
+  background: #f2f3f4;
+  color: #494949;
+  color: #494949; }
+  .clr-6.swatch-7.chip::before {
+    content: "" "GRAY-70"; }
+
+*, html {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  margin: auto;
+  max-width: 1200px; }
+
+.flex {
+  display: flex; }
+
+.space-around {
+  justify-content: space-around; }
+
+.flex-wrap {
+  flex-wrap: wrap; }
+
+.flex-wrap-reverse {
+  flex-wrap: wrap-reverse; }
+
+.flex-column {
+  flex-direction: column; }
+
+.flex-column-reverse {
+  flex-direction: column-reverse; }
+
+.color-area {
+  flex-direction: column-reverse; }
+  @media (min-width: 40em) {
+    .color-area {
+      flex-direction: column; } }
+
+@media (min-width: 40em) {
+  .palette {
+    margin: 2vh 2vw; }
+    .palette .chip:nth-child(1) {
+      margin-top: 0; }
+    .palette .chip:last-child {
+      margin-bottom: 0; } }
+
+.chip {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 25vw;
+  width: 100vw;
+  text-transform: uppercase;
+  background: #000;
+  text-align: center;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  font-size: 5vw;
+  font-weight: 400;
+  letter-spacing: 0.05ex;
+  line-height: 1.38; }
+  .chip:before {
+    white-space: pre;
+    font-size: 0.8em;
+    font-weight: 800;
+    padding: 0.3vh 0.5vh;
+    border-radius: 4px; }
+  @media (min-width: 40em) {
+    .chip {
+      height: 180px;
+      width: 180px;
+      min-height: 100px;
+      min-width: 100px;
+      max-height: 168px;
+      max-width: 168px;
+      font-size: 1.3vmax;
+      border-radius: 100%;
+      margin: -3vh 0 0 0; } }
+  @media (min-width: 64em) {
+    .chip {
+      font-size: 16px; } }
+
+.playground {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vw;
+  max-width: 695px;
+  max-height: 695px;
+  margin: auto; }
+  @media (min-width: 40em) {
+    .playground {
+      transition: height .3s ease, width .3s ease;
+      width: 75vw;
+      height: 75vw; } }
+  .playground .x, .playground .t, .playground .bubs, .playground .o {
+    overflow: hidden;
+    min-height: 50%;
+    width: 50%;
+    position: relative; }
+    .playground .x > div, .playground .t > div, .playground .bubs > div, .playground .o > div {
+      height: 100%;
+      width: 100%;
+      position: absolute; }
+  .playground .x :nth-child(1) {
+    top: 0;
+    left: -88%;
+    z-index: 100;
+    transform: rotate(45deg); }
+  .playground .x :nth-child(2) {
+    top: -88%;
+    left: 0;
+    z-index: 100;
+    transform: rotate(45deg); }
+  .playground .x :nth-child(3) {
+    top: 0;
+    left: 88%;
+    z-index: 100;
+    transform: rotate(45deg); }
+  .playground .x :nth-child(4) {
+    top: 88%;
+    left: 0;
+    z-index: 100;
+    transform: rotate(45deg); }
+  .playground .t :nth-child(1) {
+    position: absolute;
+    top: 60%;
+    left: 60%;
+    z-index: 100; }
+  .playground .t :nth-child(2) {
+    top: -60%;
+    left: -60%;
+    z-index: 100; }
+  .playground .t :nth-child(3) {
+    top: -60%;
+    left: 60%;
+    z-index: 100; }
+  .playground .t :nth-child(4) {
+    top: 60%;
+    left: -60%;
+    z-index: 100; }
+  .playground .bubs :nth-child(1) {
+    height: 33.33333%;
+    width: 33.33333%;
+    top: 19%;
+    left: 33%;
+    z-index: 80;
+    border-radius: 100%; }
+  .playground .bubs :nth-child(2) {
+    height: 29.41176%;
+    width: 29.41176%;
+    top: 48%;
+    right: 30%;
+    z-index: 70;
+    border-radius: 100%; }
+  .playground .bubs :nth-child(3) {
+    height: 41.66667%;
+    width: 41.66667%;
+    position: absolute;
+    bottom: 14%;
+    left: 48%;
+    z-index: 60;
+    border-radius: 100%; }
+  .playground .bubs :nth-child(4) {
+    height: 25%;
+    width: 25%;
+    bottom: 47%;
+    right: 5%;
+    z-index: 100;
+    border-radius: 100%; }
+  .playground .o :nth-child(1) {
+    height: 62.5%;
+    width: 62.5%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 90;
+    border-radius: 100%; }
+  .playground .o :nth-child(2) {
+    height: 35.71429%;
+    width: 35.71429%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    border-radius: 100%; }
+  .playground .o :nth-child(3) {
+    height: 83.33333%;
+    width: 83.33333%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 80;
+    border-radius: 100%; }
+  .playground .o :nth-child(4) {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 70;
+    border-radius: 100%; }
