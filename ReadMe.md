@@ -5,7 +5,7 @@ This is an experiment in a couple ways for me. The goal was to make scaled color
 - HTML
 - JS
 - SCSS (is actually where all the generation happens for now)
-- Node & Gulp to compile SCSS 
+- Node & Gulp to compile SCSS
 
 ## Instructions
 1. Install [npm](https://www.npmjs.com/) *(only for compiling scss)*
@@ -14,11 +14,10 @@ This is an experiment in a couple ways for me. The goal was to make scaled color
 1. Run `gulp` in terminal at the project root folder! **DONEZO**.
 
 ## Todo
+- [ ] Get rid of/ rethink the circles... haha
 - [ ] Allow tweeking of each color scale independently of others
 - [ ] URL encode master colors to easily allow changing and trying different color scales.
 - [ ] Make autoprefixer work in gulpfile
 - [ ] Allow dynamic creation of number of colors.
 
 *The idea started here http://codepen.io/okayjeffrey/pen/ONEOYM. Please note: This is all a little hacky & this project will be updated and refactored probably everytime I use it.*
-
-
