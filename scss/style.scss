@@ -170,7 +170,7 @@ $white:#fff;
 @include mixIt(nth($clr-2, 1), nth($clr-2, 2), 'clr-2');
 @include mixIt(nth($clr-3, 1), nth($clr-3, 2), 'clr-3');
 @include mixIt(nth($clr-4, 1), nth($clr-4, 2), 'clr-4');
-@include remixIt(nth($clr-5, 1), nth($clr-5, 2), 'clr-5');
+@include mixIt(nth($clr-5, 1), nth($clr-5, 2), 'clr-5');
 @include remixIt(nth($clr-6, 1), nth($clr-6, 2), 'clr-6');
 
 //////////////////////////////////////////////////////////////////////////////// NO JUNK
