@@ -1,245 +1,245 @@
 .clr-1.swatch-4 {
-  background: #A6C9B1;
-  color: #f6faf7;
-  color: #536559; }
+  background: #F07322;
+  color: #fef1e9;
+  color: #fef1e9; }
   .clr-1.swatch-4.chip::before {
-    content: "Gum Leaf";
+    content: "Orangeo";
     background-color: rgba(255, 255, 255, 0.5);
     border-color: transparent; }
 
 .clr-1.swatch-1 {
-  background: #2c3530;
-  color: #f6faf7;
-  color: #f6faf7; }
+  background: #401e0a;
+  color: #fef1e9;
+  color: #fef1e9; }
   .clr-1.swatch-1.chip::before {
-    content: "" "Gum Leaf-10"; }
+    content: "" "Orangeo-10"; }
 
 .clr-1.swatch-2 {
-  background: #657b6b;
-  color: #f6faf7;
-  color: #f6faf7; }
+  background: #924615;
+  color: #fef1e9;
+  color: #fef1e9; }
   .clr-1.swatch-2.chip::before {
-    content: "" "Gum Leaf-20"; }
+    content: "" "Orangeo-20"; }
 
 .clr-1.swatch-3 {
-  background: #789180;
-  color: #f6faf7;
-  color: #f6faf7; }
+  background: #ad5319;
+  color: #fef1e9;
+  color: #fef1e9; }
   .clr-1.swatch-3.chip::before {
-    content: "" "Gum Leaf-30"; }
+    content: "" "Orangeo-30"; }
 
 .clr-1.swatch-5 {
-  background: #c5dccd;
-  color: #536559; }
+  background: #f5a470;
+  color: #783a11; }
   .clr-1.swatch-5.chip::before {
-    content: "" "Gum Leaf-50"; }
+    content: "" "Orangeo-50"; }
 
 .clr-1.swatch-6 {
-  background: #dce9e0;
-  color: #536559; }
+  background: #f9c7a8;
+  color: #783a11; }
   .clr-1.swatch-6.chip::before {
-    content: "" "Gum Leaf-60"; }
+    content: "" "Orangeo-60"; }
 
 .clr-1.swatch-7 {
-  background: #f2f7f4;
-  color: #536559; }
+  background: #fdebe0;
+  color: #783a11; }
   .clr-1.swatch-7.chip::before {
-    content: "" "Gum Leaf-70"; }
+    content: "" "Orangeo-70"; }
 
 .clr-2.swatch-4 {
-  background: #ED670D;
-  color: #fdf0e7;
-  color: #fdf0e7; }
+  background: #F0E9C9;
+  color: #fefdfa;
+  color: #787565; }
   .clr-2.swatch-4.chip::before {
-    content: "Tango";
+    content: "Tanly";
     background-color: rgba(255, 255, 255, 0.5);
     border-color: transparent; }
 
 .clr-2.swatch-1 {
-  background: #3f1c04;
-  color: #fdf0e7;
-  color: #fdf0e7; }
+  background: #403e35;
+  color: #fefdfa;
+  color: #fefdfa; }
   .clr-2.swatch-1.chip::before {
-    content: "" "Tango-10"; }
+    content: "" "Tanly-10"; }
 
 .clr-2.swatch-2 {
-  background: #903f08;
-  color: #fdf0e7;
-  color: #fdf0e7; }
+  background: #928e7b;
+  color: #fefdfa;
+  color: #fefdfa; }
   .clr-2.swatch-2.chip::before {
-    content: "" "Tango-20"; }
+    content: "" "Tanly-20"; }
 
 .clr-2.swatch-3 {
-  background: #ab4a0a;
-  color: #fdf0e7;
-  color: #fdf0e7; }
+  background: #ada891;
+  color: #fefdfa;
+  color: #fefdfa; }
   .clr-2.swatch-3.chip::before {
-    content: "" "Tango-30"; }
+    content: "" "Tanly-30"; }
 
 .clr-2.swatch-5 {
-  background: #f39d62;
-  color: #773407; }
+  background: #f5f1dc;
+  color: #787565; }
   .clr-2.swatch-5.chip::before {
-    content: "" "Tango-50"; }
+    content: "" "Tanly-50"; }
 
 .clr-2.swatch-6 {
-  background: #f8c3a0;
-  color: #773407; }
+  background: #f9f6e9;
+  color: #787565; }
   .clr-2.swatch-6.chip::before {
-    content: "" "Tango-60"; }
+    content: "" "Tanly-60"; }
 
 .clr-2.swatch-7 {
-  background: #fce9dc;
-  color: #773407; }
+  background: #fdfbf7;
+  color: #787565; }
   .clr-2.swatch-7.chip::before {
-    content: "" "Tango-70"; }
+    content: "" "Tanly-70"; }
 
 .clr-3.swatch-4 {
-  background: #FFAC2C;
-  color: #fff7ea;
-  color: #805616; }
+  background: #FBDC36;
+  color: #fffceb;
+  color: #7e6e1b; }
   .clr-3.swatch-4.chip::before {
-    content: "Saffron";
+    content: "Yeallo";
     background-color: rgba(255, 255, 255, 0.5);
     border-color: transparent; }
 
 .clr-3.swatch-1 {
-  background: #432e0b;
-  color: #fff7ea;
-  color: #fff7ea; }
+  background: #433b0e;
+  color: #fffceb;
+  color: #fffceb; }
   .clr-3.swatch-1.chip::before {
-    content: "" "Saffron-10"; }
+    content: "" "Yeallo-10"; }
 
 .clr-3.swatch-2 {
-  background: #9b691b;
-  color: #fff7ea;
-  color: #fff7ea; }
+  background: #998621;
+  color: #fffceb;
+  color: #fffceb; }
   .clr-3.swatch-2.chip::before {
-    content: "" "Saffron-20"; }
+    content: "" "Yeallo-20"; }
 
 .clr-3.swatch-3 {
-  background: #b87c1f;
-  color: #fff7ea;
-  color: #fff7ea; }
+  background: #b59f27;
+  color: #fffceb;
+  color: #fffceb; }
   .clr-3.swatch-3.chip::before {
-    content: "" "Saffron-30"; }
+    content: "" "Yeallo-30"; }
 
 .clr-3.swatch-5 {
-  background: #ffc976;
-  color: #805616; }
+  background: #fce97d;
+  color: #7e6e1b; }
   .clr-3.swatch-5.chip::before {
-    content: "" "Saffron-50"; }
+    content: "" "Yeallo-50"; }
 
 .clr-3.swatch-6 {
-  background: #ffdeab;
-  color: #805616; }
+  background: #fdf2b0;
+  color: #7e6e1b; }
   .clr-3.swatch-6.chip::before {
-    content: "" "Saffron-60"; }
+    content: "" "Yeallo-60"; }
 
 .clr-3.swatch-7 {
-  background: #fff3e0;
-  color: #805616; }
+  background: #fefae2;
+  color: #7e6e1b; }
   .clr-3.swatch-7.chip::before {
-    content: "" "Saffron-70"; }
+    content: "" "Yeallo-70"; }
 
 .clr-4.swatch-4 {
-  background: #FAE09C;
-  color: #fffcf5;
-  color: #7d704e; }
+  background: #59BCDE;
+  color: #eef8fc;
+  color: #eef8fc; }
   .clr-4.swatch-4.chip::before {
-    content: "Brown";
+    content: "Brue";
     background-color: rgba(255, 255, 255, 0.5);
     border-color: transparent; }
 
 .clr-4.swatch-1 {
-  background: #433c2a;
-  color: #fffcf5;
-  color: #fffcf5; }
+  background: #18323b;
+  color: #eef8fc;
+  color: #eef8fc; }
   .clr-4.swatch-1.chip::before {
-    content: "" "Brown-10"; }
+    content: "" "Brue-10"; }
 
 .clr-4.swatch-2 {
-  background: #98885f;
-  color: #fffcf5;
-  color: #fffcf5; }
+  background: #367287;
+  color: #eef8fc;
+  color: #eef8fc; }
   .clr-4.swatch-2.chip::before {
-    content: "" "Brown-20"; }
+    content: "" "Brue-20"; }
 
 .clr-4.swatch-3 {
-  background: #b5a271;
-  color: #fffcf5;
-  color: #fffcf5; }
+  background: #4188a1;
+  color: #eef8fc;
+  color: #eef8fc; }
   .clr-4.swatch-3.chip::before {
-    content: "" "Brown-30"; }
+    content: "" "Brue-30"; }
 
 .clr-4.swatch-5 {
-  background: #fbebbf;
-  color: #7d704e; }
+  background: #93d4e9;
+  color: #2d5e6f; }
   .clr-4.swatch-5.chip::before {
-    content: "" "Brown-50"; }
+    content: "" "Brue-50"; }
 
 .clr-4.swatch-6 {
-  background: #fdf2d7;
-  color: #7d704e; }
+  background: #bde5f2;
+  color: #2d5e6f; }
   .clr-4.swatch-6.chip::before {
-    content: "" "Brown-60"; }
+    content: "" "Brue-60"; }
 
 .clr-4.swatch-7 {
-  background: #fefbf1;
-  color: #7d704e; }
+  background: #e7f5fb;
+  color: #2d5e6f; }
   .clr-4.swatch-7.chip::before {
-    content: "" "Brown-70"; }
+    content: "" "Brue-70"; }
 
 .clr-5.swatch-4 {
-  background: #101a3b;
-  color: #e7e7ea;
-  color: #e7e7ea; }
+  background: #e02932;
+  color: #fde9e9;
+  color: #fde9e9; }
   .clr-5.swatch-4.chip::before {
-    content: "Bunting";
+    content: "Vibrant";
     background-color: rgba(255, 255, 255, 0.5);
     border-color: transparent; }
 
 .clr-5.swatch-1 {
-  background: #020912;
-  color: #e7e7ea;
-  color: #e7e7ea; }
+  background: #170b11;
+  color: #fde9e9;
+  color: #fde9e9; }
   .clr-5.swatch-1.chip::before {
-    content: "" "Bunting-10"; }
+    content: "" "Vibrant-10"; }
 
 .clr-5.swatch-2 {
-  background: #091126;
-  color: #e7e7ea;
-  color: #e7e7ea; }
+  background: #7c1a21;
+  color: #fde9e9;
+  color: #fde9e9; }
   .clr-5.swatch-2.chip::before {
-    content: "" "Bunting-20"; }
+    content: "" "Vibrant-20"; }
 
 .clr-5.swatch-3 {
-  background: #0b142d;
-  color: #e7e7ea;
-  color: #e7e7ea; }
+  background: #9d1f26;
+  color: #fde9e9;
+  color: #fde9e9; }
   .clr-5.swatch-3.chip::before {
-    content: "" "Bunting-30"; }
+    content: "" "Vibrant-30"; }
 
 .clr-5.swatch-5 {
-  background: #575b70;
-  color: #090a19;
-  color: #e7e7ea; }
+  background: #f0656a;
+  color: #761214;
+  color: #fde9e9; }
   .clr-5.swatch-5.chip::before {
-    content: "" "Bunting-50"; }
+    content: "" "Vibrant-50"; }
 
 .clr-5.swatch-6 {
-  background: #9ea1ae;
-  color: #090a19;
-  color: #090a19; }
+  background: #f5a7aa;
+  color: #761214;
+  color: #761214; }
   .clr-5.swatch-6.chip::before {
-    content: "" "Bunting-60"; }
+    content: "" "Vibrant-60"; }
 
 .clr-5.swatch-7 {
-  background: #e5e6ea;
-  color: #090a19;
-  color: #090a19; }
+  background: #fae8e9;
+  color: #761214;
+  color: #761214; }
   .clr-5.swatch-7.chip::before {
-    content: "" "Bunting-70"; }
+    content: "" "Vibrant-70"; }
 
 .clr-6.swatch-4 {
   background: #8b9297;
@@ -432,30 +432,30 @@ body {
   .playground .bubs :nth-child(1) {
     height: 33.33333%;
     width: 33.33333%;
-    top: 19%;
-    left: 33%;
+    top: 15%;
+    left: 42%;
     z-index: 80;
     border-radius: 100%; }
   .playground .bubs :nth-child(2) {
     height: 29.41176%;
     width: 29.41176%;
-    top: 48%;
-    right: 30%;
+    top: 21%;
+    right: 35%;
     z-index: 70;
     border-radius: 100%; }
   .playground .bubs :nth-child(3) {
     height: 41.66667%;
     width: 41.66667%;
     position: absolute;
-    bottom: 14%;
-    left: 48%;
+    bottom: 34%;
+    left: 40%;
     z-index: 60;
     border-radius: 100%; }
   .playground .bubs :nth-child(4) {
     height: 25%;
     width: 25%;
-    bottom: 47%;
-    right: 5%;
+    bottom: 46%;
+    right: 24%;
     z-index: 100;
     border-radius: 100%; }
   .playground .o :nth-child(1) {
