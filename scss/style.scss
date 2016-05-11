@@ -4,174 +4,103 @@
 // @include breakpoint(large){ }
 
 @mixin breakpoint($point) {
-  @if $point == large {
-    @media (min-width: 64em) { @content; }
-  }
-  @else if $point == medium {
-    @media (min-width: 50em) { @content; }
-  }
-  @else if $point == small {
-    @media (min-width: 40em) { @content; }
-  }
+  @if $point == large { @media (min-width: 64em) { @content; } }
+  @else if $point == medium { @media (min-width: 50em) { @content; } }
+  @else if $point == small { @media (min-width: 40em) { @content; } }
 }
-
-// CORE BRAND COLORS HERE!
-// CHANGE ME!!!
-// $clr-1: (#A6C9B1, 'Gum Leaf');
-// $clr-2: (#ED670D, 'Tango');
-// $clr-3: (#FFAC2C, 'Saffron');
-// $clr-4: (#FAE09C, 'Brown');
-// $clr-5: (#111331, 'Bunting');
-// $clr-6: (#929292, 'GRAY');
-
-$clr-1: (#F07322, 'Orangeo');
-$clr-2: (#F0E9C9, 'Tanly');
-$clr-3: (#FBDC36, 'Yeallo');
-$clr-4: (#59BCDE, 'Brue');
-$clr-5: (#EC2327, 'Vibrant');
-$clr-6: (#929292, 'GRAY');
 
 // FOR MIXING depending on what outcome you want.
-$warm: #5B062D;
+$warm: #E00606;
 $cool: #0096FF;
-$black:#000;
-$white:#fff;
+$black:#000000;
+$white:#ffffff;
 
-// For text mixing on the Color Chips
-// $dark-text-default: #333;
-// $light-text-default: white;
+// [#Base Color], [NAME], [Color to mix in # or 0 if not wanted]
+$clr-1: (#75B9A5, 'Teal', $cool);
+$clr-2: (#ED670D, 'Orange', $warm);
+$clr-3: (#FFAC2C, 'Gold', $warm);
+$clr-4: (#FAE09C, 'Yellow', $warm);
+$clr-5: (#091B5E, 'Blue', 0);
+$clr-6: (#7f7f7f, 'GRAY', $cool);
 
-// Understands which color to choose for @color-contrast
-// ---------------- NEW COLOR SCALE  Understands which color to choose for @color-contrast
+// This is not the total amount of scaled colors
+//How many colors you want to scale up/down from your base color.
+$scale: 4;
+$scale-to: ($scale * 2) + 1;
+$base-num: $scale + 1;
+
+// PUT A CAP ON ALL THOSE ODD NUMBER SCALES
+@function scaleCap($num, $mixer){
+    $howLight: lightness($mixer);
+    $divider: 100/(100 - $howLight);
+    $cap: $num / $divider;
+    @return $cap;
+}
+
+// Understands which color to choose for @color-contrast ---------------- NEW COLOR SCALE  Understands which color to choose for @color-contrast
 @function color-choice($color) {
-    @if (lightness( $color ) > 70) {
-        @return darken( $color, 40% );
-    } @else {
-        @return lighten( $color, 80% );
-    }
+    @if (lightness( $color ) > 70) { @return darken( $color, 40% ); }
+    @else { @return lighten( $color, 80% ); }
 }
-// ---------------- Understands the brightness of the color for @color-contrast
-@function brightness($color) {
-  @return ((red($color) * .299) + (green($color) * .587) + (blue($color) * .114)) / 255 * 100%;
-}
+// Understands the brightness of the color for @color-contrast
+@function brightness($color) { @return ((red($color) * .299) + (green($color) * .587) + (blue($color) * .114)) / 255 * 100%; }
 
-// ---------------- Compares contrast of a given color to the light/dark arguments and returns whichever is most "contrasty"
+// Compares contrast of a given color to the light/dark arguments and returns whichever is most "contrasty"
 @function color-contrast($color, $dark, $light) {
     @if $color == null { @return null; }
     @else {
         $color-brightness: brightness($color);
         $light-text-brightness: brightness($light);
         $dark-text-brightness: brightness($dark);
-
         @return if( abs($color-brightness - $light-text-brightness) > abs($color-brightness - $dark-text-brightness), $light, $dark);
     }
 }
 
-// ---------------- MIX the Palettes from the base colors above!
-@mixin mixIt($color, $name, $ref) {
-    $dark: mix($black, $color, 50% );
-    $light: mix($white, $color, 90% );
-    $base-num: 4;
-
-    // BASE
-    .#{$ref}.swatch-#{$base-num} {
-        background:$color;
-		color: $light;
-        color: color-contrast($color, $dark, $light);
-        &.chip::before { content:$name; background-color: rgba(255,255,255,0.5); border-color:transparent; }
-    }
-    // SHADES
-    @for $i from 1 through 3 {
-        $perc: $i * 10;
-        $scale: 72 / $i;
-        $color-shade: mix($black, $color, $scale + 0% );
-        // $color-shade: shade($color, $scale + 0% );
-        $mixer: darken($warm, $i * 33 );
-        $shade: mix($color-shade, $mixer, 95%);
-
-        .#{$ref}.swatch-#{$i} {
-            background:$shade;
-			color: $light;
-            color: color-contrast($shade, $dark, $light);
-            &.chip::before { content:''$name+'-'+$perc;}
-        }
-    }
-    // TINTS
-    @for $i from 5 through 7 {
-        $ii: $i - 4;
-        $perc: $i * 10;
-        $scale: 28*($i - 4);
-        $color-tint: mix($white, $color, $scale + 0% );
-        // $color-tint: tint($color, $scale + 0% );
-        $mixer: lighten( $cool, $i * 14);
-        $tint: mix($color-tint, $mixer, 90);
-
-        .#{$ref}.swatch-#{$i} {
-            background:$tint;
-			color: $dark;
-            // color: color-contrast($tint, $dark, $light);
-            &.chip::before { content:''$name+'-'+$perc;}
-        }
+// WHAT GETS SPIT OUT!
+@mixin colorCode($ref, $name, $x, $output, $color-percent) {
+    .#{$ref}.swatch-#{$x} {
+        background:$output;
+        color: color-contrast($output, $black, $white);
+        &.chip::before { content:''$name+'-'+$color-percent;}
     }
 }
 
-// ---------------- MIX the Palettes from the base colors above!
-@mixin remixIt($color, $name, $ref) {
-    $cooler: #0096FF;
-    $dark: mix($black, $color, 50% );
-    $light: mix($white, $color, 90% );
-    $base-num: 4;
+@mixin mixIt($color, $name, $ref, $mixer) {
+    $mix:; // Needs to exists before we try and set
 
-    // BASE
-    .#{$ref}.swatch-#{$base-num} {
-        $mix: mix($color, $cooler, 95%);
-        background:$mix;
-
-		color: $light;
-        color: color-contrast($color, $dark, $light);
-        &.chip::before { content:$name; background-color: rgba(255,255,255,0.5); border-color:transparent; }
+    @for $i from 1 through $scale { // ---------- Tints
+        $j: ($i - $base-num)*-1;
+        $name-per: percentage($i/10);
+        $percentage: percentage(($j/10)*2.25);
+        // Mixing in the Mixer
+        @if $mixer != 0 { $mix:mix($mixer, $white, scaleCap(4%, $mixer)); }
+        @else { $mix: $white; }
+        // Final Color Tint
+        $tint: mix($mix, $color, $percentage);
+        @include colorCode($ref, $name, $i, $tint, $name-per);
     }
-    // SHADES
-    @for $i from 1 through 3 {
-        $perc: $i * 10;
-        $scale: 90 / $i;
-        $color-shade: mix($black, $color, $scale + 0% );
-        // $mixer: darken($cooler, $i * 33 );
-        $shade: mix($color-shade, $cooler, 95%);
 
-        .#{$ref}.swatch-#{$i} {
-            background:$shade;
+    @include colorCode($ref, $name, 5, $color, 50%); //----------------- Base Color
 
-			color: $light;
-            color: color-contrast($shade, $dark, $light);
-            &.chip::before { content:''$name+'-'+$perc;}
-        }
-    }
-    // TINTS
-    @for $i from 5 through 7 {
-        $ii: $i - 4;
-        $perc: $i * 10;
-        $scale: 30*($i - 4);
-        $color-tint: mix($white, $color, $scale + 0% );
-        // $mixer: lighten( $cooler, $i * 14);
-        $tint: mix($color-tint, $cooler, 99%);
-
-        .#{$ref}.swatch-#{$i} {
-            background:$tint;
-			color: $dark;
-            color: color-contrast($tint, $dark, $light);
-            &.chip::before { content:''$name+'-'+$perc;}
-        }
+    @for $i from ($base-num + 1) through $scale-to { // ---------------- Shades
+        $name-per: percentage($i/10);
+        $percentage: percentage((($i - $base-num)*2.25)/10);
+        // Mixing in the Mixer
+        @if $mixer != 0 { $mix:mix($mixer, $black, scaleCap(11%, $mixer)); }
+        @else { $mix: $black; }
+        // Final Color Shade
+        $shade: mix($mix, $color, $percentage);
+        @include colorCode($ref, $name, $i, $shade, $name-per);
     }
 }
 
 // WHAT TO MIX!!!!!
-@include mixIt(nth($clr-1, 1), nth($clr-1, 2), 'clr-1');
-@include mixIt(nth($clr-2, 1), nth($clr-2, 2), 'clr-2');
-@include mixIt(nth($clr-3, 1), nth($clr-3, 2), 'clr-3');
-@include mixIt(nth($clr-4, 1), nth($clr-4, 2), 'clr-4');
-@include mixIt(nth($clr-5, 1), nth($clr-5, 2), 'clr-5');
-@include remixIt(nth($clr-6, 1), nth($clr-6, 2), 'clr-6');
+@include mixIt(nth($clr-1, 1), nth($clr-1, 2), 'clr-1', nth($clr-1, 3));
+@include mixIt(nth($clr-2, 1), nth($clr-2, 2), 'clr-2', nth($clr-2, 3));
+@include mixIt(nth($clr-3, 1), nth($clr-3, 2), 'clr-3', nth($clr-3, 3));
+@include mixIt(nth($clr-4, 1), nth($clr-4, 2), 'clr-4', nth($clr-4, 3));
+@include mixIt(nth($clr-5, 1), nth($clr-5, 2), 'clr-5', nth($clr-5, 3));
+@include mixIt(nth($clr-6, 1), nth($clr-6, 2), 'clr-6', nth($clr-6, 3));
 
 //////////////////////////////////////////////////////////////////////////////// NO JUNK
 
@@ -211,43 +140,40 @@ body {
     box-sizing: border-box;
     display:flex;
     flex-direction: column;
-    height: 25vw;
-    width: 100vw;
     text-transform:uppercase;
-    background:#000;
     text-align:center;
     overflow:hidden;
     justify-content:center;
     align-items: center;
-    font-size:5vw;
     font-weight: 400;
     letter-spacing:0.05ex;
     line-height:1.38;
 
+    height: 25vw;
+    width: 100vw;
+    background:#000;
+    font-size:5vw;
+
     &:before {
-        // display:none;\
         white-space: pre;
         font-size:0.8em;
         font-weight:800;
-        // border: solid 2px rgba(255,255,255,0.5);
-        // background-color: rgba(255,255,255,0.3);
         padding:0.3vh 0.5vh;
         border-radius:4px;
-    // @include breakpoint(small){ display:block; }
     }
 
     @include breakpoint(small){
         // height: 10vw;
         // width: 10vw;
-        height:180px;
-        width:180px;
         min-height:100px;
         min-width:100px;
+        height:auto;
+        width:180px;
         max-height: 168px;
         max-width: 168px;
         font-size:1.3vmax;
-        border-radius: 100%;
-        margin:-3vh 0 0 0;
+        // border-radius: 100%;
+        // margin:-3vh 0 0 0;
     }
     @include breakpoint(large){ font-size:16px; }
 }

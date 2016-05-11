@@ -1,293 +1,326 @@
-.clr-1.swatch-4 {
-  background: #F07322;
-  color: #fef1e9;
-  color: #fef1e9; }
-  .clr-1.swatch-4.chip::before {
-    content: "Orangeo";
-    background-color: rgba(255, 255, 255, 0.5);
-    border-color: transparent; }
-
 .clr-1.swatch-1 {
-  background: #401e0a;
-  color: #fef1e9;
-  color: #fef1e9; }
+  background: #edf6f6;
+  color: #000000; }
   .clr-1.swatch-1.chip::before {
-    content: "" "Orangeo-10"; }
+    content: "" "Teal-10%"; }
 
 .clr-1.swatch-2 {
-  background: #924615;
-  color: #fef1e9;
-  color: #fef1e9; }
+  background: #cfe7e2;
+  color: #000000; }
   .clr-1.swatch-2.chip::before {
-    content: "" "Orangeo-20"; }
+    content: "" "Teal-20%"; }
 
 .clr-1.swatch-3 {
-  background: #ad5319;
-  color: #fef1e9;
-  color: #fef1e9; }
+  background: #b1d8ce;
+  color: #000000; }
   .clr-1.swatch-3.chip::before {
-    content: "" "Orangeo-30"; }
+    content: "" "Teal-30%"; }
+
+.clr-1.swatch-4 {
+  background: #93c8b9;
+  color: #000000; }
+  .clr-1.swatch-4.chip::before {
+    content: "" "Teal-40%"; }
 
 .clr-1.swatch-5 {
-  background: #f5a470;
-  color: #783a11; }
+  background: #75B9A5;
+  color: #000000; }
   .clr-1.swatch-5.chip::before {
-    content: "" "Orangeo-50"; }
+    content: "" "Teal-50%"; }
 
 .clr-1.swatch-6 {
-  background: #f9c7a8;
-  color: #783a11; }
+  background: #5b9183;
+  color: #ffffff; }
   .clr-1.swatch-6.chip::before {
-    content: "" "Orangeo-60"; }
+    content: "" "Teal-60%"; }
 
 .clr-1.swatch-7 {
-  background: #fdebe0;
-  color: #783a11; }
+  background: #406961;
+  color: #ffffff; }
   .clr-1.swatch-7.chip::before {
-    content: "" "Orangeo-70"; }
+    content: "" "Teal-70%"; }
 
-.clr-2.swatch-4 {
-  background: #F0E9C9;
-  color: #fefdfa;
-  color: #787565; }
-  .clr-2.swatch-4.chip::before {
-    content: "Tanly";
-    background-color: rgba(255, 255, 255, 0.5);
-    border-color: transparent; }
+.clr-1.swatch-8 {
+  background: #26423f;
+  color: #ffffff; }
+  .clr-1.swatch-8.chip::before {
+    content: "" "Teal-80%"; }
+
+.clr-1.swatch-9 {
+  background: #0c1a1d;
+  color: #ffffff; }
+  .clr-1.swatch-9.chip::before {
+    content: "" "Teal-90%"; }
 
 .clr-2.swatch-1 {
-  background: #403e35;
-  color: #fefdfa;
-  color: #fefdfa; }
+  background: #fcebe2;
+  color: #000000; }
   .clr-2.swatch-1.chip::before {
-    content: "" "Tanly-10"; }
+    content: "" "Orange-10%"; }
 
 .clr-2.swatch-2 {
-  background: #928e7b;
-  color: #fefdfa;
-  color: #fefdfa; }
+  background: #f8caad;
+  color: #000000; }
   .clr-2.swatch-2.chip::before {
-    content: "" "Tanly-20"; }
+    content: "" "Orange-20%"; }
 
 .clr-2.swatch-3 {
-  background: #ada891;
-  color: #fefdfa;
-  color: #fefdfa; }
+  background: #f5a978;
+  color: #000000; }
   .clr-2.swatch-3.chip::before {
-    content: "" "Tanly-30"; }
+    content: "" "Orange-30%"; }
+
+.clr-2.swatch-4 {
+  background: #f18842;
+  color: #000000; }
+  .clr-2.swatch-4.chip::before {
+    content: "" "Orange-40%"; }
 
 .clr-2.swatch-5 {
-  background: #f5f1dc;
-  color: #787565; }
+  background: #ED670D;
+  color: #000000; }
   .clr-2.swatch-5.chip::before {
-    content: "" "Tanly-50"; }
+    content: "" "Orange-50%"; }
 
 .clr-2.swatch-6 {
-  background: #f9f6e9;
-  color: #787565; }
+  background: #bb500a;
+  color: #ffffff; }
   .clr-2.swatch-6.chip::before {
-    content: "" "Tanly-60"; }
+    content: "" "Orange-60%"; }
 
 .clr-2.swatch-7 {
-  background: #fdfbf7;
-  color: #787565; }
+  background: #893907;
+  color: #ffffff; }
   .clr-2.swatch-7.chip::before {
-    content: "" "Tanly-70"; }
+    content: "" "Orange-70%"; }
 
-.clr-3.swatch-4 {
-  background: #FBDC36;
-  color: #fffceb;
-  color: #7e6e1b; }
-  .clr-3.swatch-4.chip::before {
-    content: "Yeallo";
-    background-color: rgba(255, 255, 255, 0.5);
-    border-color: transparent; }
+.clr-2.swatch-8 {
+  background: #562104;
+  color: #ffffff; }
+  .clr-2.swatch-8.chip::before {
+    content: "" "Orange-80%"; }
+
+.clr-2.swatch-9 {
+  background: #240a01;
+  color: #ffffff; }
+  .clr-2.swatch-9.chip::before {
+    content: "" "Orange-90%"; }
 
 .clr-3.swatch-1 {
-  background: #433b0e;
-  color: #fffceb;
-  color: #fffceb; }
+  background: #fef2e5;
+  color: #000000; }
   .clr-3.swatch-1.chip::before {
-    content: "" "Yeallo-10"; }
+    content: "" "Gold-10%"; }
 
 .clr-3.swatch-2 {
-  background: #998621;
-  color: #fffceb;
-  color: #fffceb; }
+  background: #fee1b7;
+  color: #000000; }
   .clr-3.swatch-2.chip::before {
-    content: "" "Yeallo-20"; }
+    content: "" "Gold-20%"; }
 
 .clr-3.swatch-3 {
-  background: #b59f27;
-  color: #fffceb;
-  color: #fffceb; }
+  background: #ffcf89;
+  color: #000000; }
   .clr-3.swatch-3.chip::before {
-    content: "" "Yeallo-30"; }
+    content: "" "Gold-30%"; }
+
+.clr-3.swatch-4 {
+  background: #ffbe5a;
+  color: #000000; }
+  .clr-3.swatch-4.chip::before {
+    content: "" "Gold-40%"; }
 
 .clr-3.swatch-5 {
-  background: #fce97d;
-  color: #7e6e1b; }
+  background: #FFAC2C;
+  color: #000000; }
   .clr-3.swatch-5.chip::before {
-    content: "" "Yeallo-50"; }
+    content: "" "Gold-50%"; }
 
 .clr-3.swatch-6 {
-  background: #fdf2b0;
-  color: #7e6e1b; }
+  background: #c98522;
+  color: #000000; }
   .clr-3.swatch-6.chip::before {
-    content: "" "Yeallo-60"; }
+    content: "" "Gold-60%"; }
 
 .clr-3.swatch-7 {
-  background: #fefae2;
-  color: #7e6e1b; }
+  background: #935f18;
+  color: #ffffff; }
   .clr-3.swatch-7.chip::before {
-    content: "" "Yeallo-70"; }
+    content: "" "Gold-70%"; }
 
-.clr-4.swatch-4 {
-  background: #59BCDE;
-  color: #eef8fc;
-  color: #eef8fc; }
-  .clr-4.swatch-4.chip::before {
-    content: "Brue";
-    background-color: rgba(255, 255, 255, 0.5);
-    border-color: transparent; }
+.clr-3.swatch-8 {
+  background: #5c380e;
+  color: #ffffff; }
+  .clr-3.swatch-8.chip::before {
+    content: "" "Gold-80%"; }
+
+.clr-3.swatch-9 {
+  background: #261104;
+  color: #ffffff; }
+  .clr-3.swatch-9.chip::before {
+    content: "" "Gold-90%"; }
 
 .clr-4.swatch-1 {
-  background: #18323b;
-  color: #eef8fc;
-  color: #eef8fc; }
+  background: #fef7f1;
+  color: #000000; }
   .clr-4.swatch-1.chip::before {
-    content: "" "Brue-10"; }
+    content: "" "Yellow-10%"; }
 
 .clr-4.swatch-2 {
-  background: #367287;
-  color: #eef8fc;
-  color: #eef8fc; }
+  background: #fdf2db;
+  color: #000000; }
   .clr-4.swatch-2.chip::before {
-    content: "" "Brue-20"; }
+    content: "" "Yellow-20%"; }
 
 .clr-4.swatch-3 {
-  background: #4188a1;
-  color: #eef8fc;
-  color: #eef8fc; }
+  background: #fcecc6;
+  color: #000000; }
   .clr-4.swatch-3.chip::before {
-    content: "" "Brue-30"; }
+    content: "" "Yellow-30%"; }
+
+.clr-4.swatch-4 {
+  background: #fbe6b1;
+  color: #000000; }
+  .clr-4.swatch-4.chip::before {
+    content: "" "Yellow-40%"; }
 
 .clr-4.swatch-5 {
-  background: #93d4e9;
-  color: #2d5e6f; }
+  background: #FAE09C;
+  color: #000000; }
   .clr-4.swatch-5.chip::before {
-    content: "" "Brue-50"; }
+    content: "" "Yellow-50%"; }
 
 .clr-4.swatch-6 {
-  background: #bde5f2;
-  color: #2d5e6f; }
+  background: #c5ae79;
+  color: #000000; }
   .clr-4.swatch-6.chip::before {
-    content: "" "Brue-60"; }
+    content: "" "Yellow-60%"; }
 
 .clr-4.swatch-7 {
-  background: #e7f5fb;
-  color: #2d5e6f; }
+  background: #907b56;
+  color: #ffffff; }
   .clr-4.swatch-7.chip::before {
-    content: "" "Brue-70"; }
+    content: "" "Yellow-70%"; }
 
-.clr-5.swatch-4 {
-  background: #EC2327;
-  color: #fde9e9;
-  color: #fde9e9; }
-  .clr-5.swatch-4.chip::before {
-    content: "Vibrant";
-    background-color: rgba(255, 255, 255, 0.5);
-    border-color: transparent; }
+.clr-4.swatch-8 {
+  background: #5b4933;
+  color: #ffffff; }
+  .clr-4.swatch-8.chip::before {
+    content: "" "Yellow-80%"; }
+
+.clr-4.swatch-9 {
+  background: #261610;
+  color: #ffffff; }
+  .clr-4.swatch-9.chip::before {
+    content: "" "Yellow-90%"; }
 
 .clr-5.swatch-1 {
-  background: #3f0a0a;
-  color: #fde9e9;
-  color: #fde9e9; }
+  background: #e6e8ef;
+  color: #000000; }
   .clr-5.swatch-1.chip::before {
-    content: "" "Vibrant-10"; }
+    content: "" "Blue-10%"; }
 
 .clr-5.swatch-2 {
-  background: #8f1518;
-  color: #fde9e9;
-  color: #fde9e9; }
+  background: #afb5cb;
+  color: #000000; }
   .clr-5.swatch-2.chip::before {
-    content: "" "Vibrant-20"; }
+    content: "" "Blue-20%"; }
 
 .clr-5.swatch-3 {
-  background: #aa1a1d;
-  color: #fde9e9;
-  color: #fde9e9; }
+  background: #7882a6;
+  color: #000000; }
   .clr-5.swatch-3.chip::before {
-    content: "" "Vibrant-30"; }
+    content: "" "Blue-30%"; }
+
+.clr-5.swatch-4 {
+  background: #404e82;
+  color: #ffffff; }
+  .clr-5.swatch-4.chip::before {
+    content: "" "Blue-40%"; }
 
 .clr-5.swatch-5 {
-  background: #f27173;
-  color: #761214; }
+  background: #091B5E;
+  color: #ffffff; }
   .clr-5.swatch-5.chip::before {
-    content: "" "Vibrant-50"; }
+    content: "" "Blue-50%"; }
 
 .clr-5.swatch-6 {
-  background: #f8a8aa;
-  color: #761214; }
+  background: #071549;
+  color: #ffffff; }
   .clr-5.swatch-6.chip::before {
-    content: "" "Vibrant-60"; }
+    content: "" "Blue-60%"; }
 
 .clr-5.swatch-7 {
-  background: #fce0e0;
-  color: #761214; }
+  background: #050f34;
+  color: #ffffff; }
   .clr-5.swatch-7.chip::before {
-    content: "" "Vibrant-70"; }
+    content: "" "Blue-70%"; }
 
-.clr-6.swatch-4 {
-  background: #8b9297;
-  color: #f4f4f4;
-  color: #f4f4f4; }
-  .clr-6.swatch-4.chip::before {
-    content: "GRAY";
-    background-color: rgba(255, 255, 255, 0.5);
-    border-color: transparent; }
+.clr-5.swatch-8 {
+  background: #03091f;
+  color: #ffffff; }
+  .clr-5.swatch-8.chip::before {
+    content: "" "Blue-80%"; }
+
+.clr-5.swatch-9 {
+  background: #010309;
+  color: #ffffff; }
+  .clr-5.swatch-9.chip::before {
+    content: "" "Blue-90%"; }
 
 .clr-6.swatch-1 {
-  background: #0e161b;
-  color: #f4f4f4;
-  color: #f4f4f4; }
+  background: #eef0f2;
+  color: #000000; }
   .clr-6.swatch-1.chip::before {
-    content: "" "GRAY-10"; }
+    content: "" "GRAY-10%"; }
 
 .clr-6.swatch-2 {
-  background: #4c5459;
-  color: #f4f4f4;
-  color: #f4f4f4; }
+  background: #d2d4d5;
+  color: #000000; }
   .clr-6.swatch-2.chip::before {
-    content: "" "GRAY-20"; }
+    content: "" "GRAY-20%"; }
 
 .clr-6.swatch-3 {
-  background: #61686e;
-  color: #f4f4f4;
-  color: #f4f4f4; }
+  background: #b6b8b9;
+  color: #000000; }
   .clr-6.swatch-3.chip::before {
-    content: "" "GRAY-30"; }
+    content: "" "GRAY-30%"; }
+
+.clr-6.swatch-4 {
+  background: #9b9b9c;
+  color: #000000; }
+  .clr-6.swatch-4.chip::before {
+    content: "" "GRAY-40%"; }
 
 .clr-6.swatch-5 {
-  background: #b1b3b4;
-  color: #494949;
-  color: #494949; }
+  background: #7f7f7f;
+  color: #ffffff; }
   .clr-6.swatch-5.chip::before {
-    content: "" "GRAY-50"; }
+    content: "" "GRAY-50%"; }
 
 .clr-6.swatch-6 {
-  background: #d1d2d3;
-  color: #494949;
-  color: #494949; }
+  background: #626466;
+  color: #ffffff; }
   .clr-6.swatch-6.chip::before {
-    content: "" "GRAY-60"; }
+    content: "" "GRAY-60%"; }
 
 .clr-6.swatch-7 {
-  background: #f2f3f4;
-  color: #494949;
-  color: #494949; }
+  background: #46494c;
+  color: #ffffff; }
   .clr-6.swatch-7.chip::before {
-    content: "" "GRAY-70"; }
+    content: "" "GRAY-70%"; }
+
+.clr-6.swatch-8 {
+  background: #292f33;
+  color: #ffffff; }
+  .clr-6.swatch-8.chip::before {
+    content: "" "GRAY-80%"; }
+
+.clr-6.swatch-9 {
+  background: #0d1419;
+  color: #ffffff; }
+  .clr-6.swatch-9.chip::before {
+    content: "" "GRAY-90%"; }
 
 *, html {
   margin: 0;
@@ -335,18 +368,18 @@ body {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  height: 25vw;
-  width: 100vw;
   text-transform: uppercase;
-  background: #000;
   text-align: center;
   overflow: hidden;
   justify-content: center;
   align-items: center;
-  font-size: 5vw;
   font-weight: 400;
   letter-spacing: 0.05ex;
-  line-height: 1.38; }
+  line-height: 1.38;
+  height: 25vw;
+  width: 100vw;
+  background: #000;
+  font-size: 5vw; }
   .chip:before {
     white-space: pre;
     font-size: 0.8em;
@@ -355,15 +388,13 @@ body {
     border-radius: 4px; }
   @media (min-width: 40em) {
     .chip {
-      height: 180px;
-      width: 180px;
       min-height: 100px;
       min-width: 100px;
+      height: auto;
+      width: 180px;
       max-height: 168px;
       max-width: 168px;
-      font-size: 1.3vmax;
-      border-radius: 100%;
-      margin: -3vh 0 0 0; } }
+      font-size: 1.3vmax; } }
   @media (min-width: 64em) {
     .chip {
       font-size: 16px; } }
@@ -429,30 +460,30 @@ body {
   .playground .bubs :nth-child(1) {
     height: 33.33333%;
     width: 33.33333%;
-    top: 23%;
-    left: 44%;
+    top: 18%;
+    left: 42%;
     z-index: 80;
     border-radius: 100%; }
   .playground .bubs :nth-child(2) {
     height: 29.41176%;
     width: 29.41176%;
-    top: 42%;
-    right: 22%;
+    top: 29%;
+    right: 50%;
     z-index: 70;
     border-radius: 100%; }
   .playground .bubs :nth-child(3) {
     height: 41.66667%;
     width: 41.66667%;
     position: absolute;
-    bottom: 31%;
-    left: 47%;
+    bottom: 7%;
+    left: 43%;
     z-index: 60;
     border-radius: 100%; }
   .playground .bubs :nth-child(4) {
     height: 25%;
     width: 25%;
-    bottom: 20%;
-    right: 37%;
+    bottom: 5%;
+    right: 44%;
     z-index: 100;
     border-radius: 100%; }
   .playground .o :nth-child(1) {
