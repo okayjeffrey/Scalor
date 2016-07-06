@@ -10,22 +10,24 @@
 }
 
 // FOR MIXING depending on what outcome you want.
-$warm: #E00606;
-$cool: #0096FF;
+$warm: #FF8C55;
+$cool: #0090FB;
 $black:#000000;
 $white:#ffffff;
 
-// [#Base Color], [NAME], [Color to mix in # or 0 if not wanted]
-$clr-1: (#75B9A5, 'Teal', $cool);
-$clr-2: (#ED670D, 'Orange', $warm);
-$clr-3: (#FFAC2C, 'Gold', $warm);
-$clr-4: (#FAE09C, 'Yellow', $warm);
-$clr-5: (#091B5E, 'Blue', 0);
-$clr-6: (#7f7f7f, 'GRAY', $cool);
+// BASE COLORS HERE! -----------------------------------------
+// -----------------------------------------------------------
+// [#Base Color], [NAME], [Color to mix in # or 0 if not wanted], [% mixed with black for Shade]
+$clr-1: (#01C2F3, 'Blue', $cool, 20%);
+$clr-2: (#F1593C, 'Orange', $warm, 40%);
+$clr-3: (#FBDC36, 'Yellow', $warm, 50%);
+$clr-4: (#F2EAD2, 'Tan', $warm, 10%);
+$clr-5: (#EC1A55, 'Pink', $warm, 50%);
+$clr-6: (#7f7f7f, 'GRAY', $cool, 10%);
 
 // This is not the total amount of scaled colors
 //How many colors you want to scale up/down from your base color.
-$scale: 4;
+$scale: 5;
 $scale-to: ($scale * 2) + 1;
 $base-num: $scale + 1;
 
@@ -65,42 +67,45 @@ $base-num: $scale + 1;
     }
 }
 
-@mixin mixIt($color, $name, $ref, $mixer) {
-    $mix:; // Needs to exists before we try and set
+@mixin mixIt($color, $name, $ref, $mixer, $shaMix) {
+    $mixS:; // Needs to exists before we try and set
 
     @for $i from 1 through $scale { // ---------- Tints
-        $j: ($i - $base-num)*-1;
-        $name-per: percentage($i/10);
-        $percentage: percentage(($j/10)*2.25);
+        $j: ($i - $base-num)*-1; // (5-6)*-1 = 1
+        $name-per: round(percentage($i/$scale-to));
+        $percentage: percentage(($j/$scale-to)*2.01); // (1/10)*2.25 = 0.225
+
+        // @debug $percentage+'hello';
+
         // Mixing in the Mixer
-        @if $mixer != 0 { $mix:mix($mixer, $white, scaleCap(4%, $mixer)); }
-        @else { $mix: $white; }
+        @if $mixer != 0 { $mixS:mix($mixer, $white, scaleCap(4%, $mixer)); }
+        @else { $mixS: $white; }
         // Final Color Tint
-        $tint: mix($mix, $color, $percentage);
+        $tint: mix($mixS, $color, $percentage);
         @include colorCode($ref, $name, $i, $tint, $name-per);
     }
 
-    @include colorCode($ref, $name, 5, $color, 50%); //----------------- Base Color
+    @include colorCode($ref, $name, $base-num, $color, 50%); //----------------- Base Color
 
     @for $i from ($base-num + 1) through $scale-to { // ---------------- Shades
-        $name-per: percentage($i/10);
-        $percentage: percentage((($i - $base-num)*2.25)/10);
+        $name-per: round(percentage($i/$scale-to));
+        $percentage: percentage((($i - $base-num)*1.8)/$scale-to);
         // Mixing in the Mixer
-        @if $mixer != 0 { $mix:mix($mixer, $black, scaleCap(11%, $mixer)); }
-        @else { $mix: $black; }
+        @if $mixer != 0 { $mixS:mix($mixer, $black, scaleCap($shaMix, $mixer)); }
+        @else { $mixS: $black; }
         // Final Color Shade
-        $shade: mix($mix, $color, $percentage);
+        $shade: mix($mixS, $color, $percentage);
         @include colorCode($ref, $name, $i, $shade, $name-per);
     }
 }
 
 // WHAT TO MIX!!!!!
-@include mixIt(nth($clr-1, 1), nth($clr-1, 2), 'clr-1', nth($clr-1, 3));
-@include mixIt(nth($clr-2, 1), nth($clr-2, 2), 'clr-2', nth($clr-2, 3));
-@include mixIt(nth($clr-3, 1), nth($clr-3, 2), 'clr-3', nth($clr-3, 3));
-@include mixIt(nth($clr-4, 1), nth($clr-4, 2), 'clr-4', nth($clr-4, 3));
-@include mixIt(nth($clr-5, 1), nth($clr-5, 2), 'clr-5', nth($clr-5, 3));
-@include mixIt(nth($clr-6, 1), nth($clr-6, 2), 'clr-6', nth($clr-6, 3));
+@include mixIt(nth($clr-1, 1), nth($clr-1, 2), 'clr-1', nth($clr-1, 3), nth($clr-1, 4));
+@include mixIt(nth($clr-2, 1), nth($clr-2, 2), 'clr-2', nth($clr-2, 3), nth($clr-2, 4));
+@include mixIt(nth($clr-3, 1), nth($clr-3, 2), 'clr-3', nth($clr-3, 3), nth($clr-3, 4));
+@include mixIt(nth($clr-4, 1), nth($clr-4, 2), 'clr-4', nth($clr-4, 3), nth($clr-4, 4));
+@include mixIt(nth($clr-5, 1), nth($clr-5, 2), 'clr-5', nth($clr-5, 3), nth($clr-5, 4));
+@include mixIt(nth($clr-6, 1), nth($clr-6, 2), 'clr-6', nth($clr-6, 3), nth($clr-6, 4));
 
 //////////////////////////////////////////////////////////////////////////////// NO JUNK
 

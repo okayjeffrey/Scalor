@@ -10,12 +10,15 @@ This is an experiment in a couple ways for me. The goal was to make scaled color
 ## Instructions
 1. Install [npm](https://www.npmjs.com/) *(only for compiling scss)*
 1. **npm** project requires [gulp](https://www.npmjs.com/package/gulp), [browser-sync](https://www.browsersync.io/), [gulp-sass](https://www.npmjs.com/package/gulp-sass), [gulp-autoprefixer](https://www.npmjs.com/package/gulp-autoprefixer) *(Only if you want to compile your scss that way)*
-1. Set your colors under `// CORE BRAND COLORS HERE!` in [style.scss](Scalor/scss/style.scss) file.
+1. Set your colors under `// BASE COLORS HERE!` in [style.scss](Scalor/scss/style.scss) file.
 1. Run `gulp` in terminal at the project root folder! **DONEZO**.
 
 ## Todo
 - [ ] Get rid of/ rethink the circles... haha
-- [ ] Allow tweeking of each color scale independently of others
+- [ ] Click to copy color
+- [ ] export colors as... ase?
+- [x] Allow tweeking of each color scale independently of others
+- [x] Allowing mixing of colors with other colors % shade wise
 - [ ] URL encode master colors to easily allow changing and trying different color scales.
 - [ ] Make autoprefixer work in gulpfile
 - [ ] Allow dynamic creation of number of colors.
